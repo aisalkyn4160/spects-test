@@ -1,0 +1,35 @@
+.marking-about {
+  padding: 24px 0;
+}
+.marking-about__container {
+  display: flex;
+  gap: 24px;
+}
+.marking-about__img {
+  width: 65%;
+  aspect-ratio: 1.8/1;
+}
+.marking-about__content {
+  width: 33%;
+}
+
+@media (max-width: 1200px) {
+  .marking-about__container {
+    flex-direction: column-reverse;
+  }
+  .marking-about__img {
+    width: 100%;
+  }
+  .marking-about__content {
+    width: 100%;
+  }
+}
+@media (max-width: 576px) {
+  .marking-about__img {
+    width: calc(100% + 32px);
+    margin-left: -16px;
+  }
+  .marking-about-contribution .marking-about__img {
+    order: -1;
+  }
+}/*# sourceMappingURL=marking-about.css.map */

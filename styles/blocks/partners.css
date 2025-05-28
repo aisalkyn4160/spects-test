@@ -1,0 +1,30 @@
+.partners {
+  background-color: #FAFAFA;
+}
+.partners__swiper {
+  margin-top: -80px;
+}
+.partners__item {
+  aspect-ratio: 1/1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  filter: grayscale(100%);
+  transition: 0.3s ease;
+}
+.partners__item img {
+  max-width: 100%;
+}
+.partners__item:hover {
+  filter: grayscale(0);
+}
+
+@media (max-width: 576px) {
+  .partners__swiper {
+    margin-top: 0;
+    padding-bottom: 50px;
+  }
+  .partners__swiper .swiper-btns {
+    display: none;
+  }
+}/*# sourceMappingURL=partners.css.map */

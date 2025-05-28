@@ -1,0 +1,129 @@
+.feedback {
+  background: no-repeat center/cover url(../../assets/imgs/form-bg.jpg);
+  padding: 50px 0 0 0;
+}
+.feedback h2 {
+  color: #1E1E1E;
+}
+.feedback__container {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  gap: 135px;
+}
+.feedback__img {
+  width: 482px;
+}
+.feedback__form {
+  width: 608px;
+  padding: 48px 40px;
+  background-color: #FFFFFF;
+  margin-top: -100px;
+  margin-bottom: -50px;
+  position: relative;
+  z-index: 2;
+}
+
+form {
+  width: 100%;
+}
+form label {
+  width: 100%;
+}
+form label span {
+  display: block;
+  margin-bottom: 8px;
+  color: #A6A6A6;
+}
+form input,
+form textarea,
+form select {
+  width: 100%;
+  padding: 12px 20px;
+  border: 1px solid #D6D6D6;
+  background-color: #fff;
+  color: #6A6A6A;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 140%;
+  letter-spacing: -2%;
+  margin-bottom: 24px;
+}
+form option {
+  color: #6A6A6A;
+}
+form textarea {
+  height: 158px;
+  resize: none;
+}
+form .form__row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  -moz-column-gap: 24px;
+       column-gap: 24px;
+}
+form p {
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 140%;
+  letter-spacing: -2%;
+  color: #A6A6A6;
+  margin-bottom: 24px;
+}
+form p a {
+  text-decoration: underline;
+  text-decoration-style: solid;
+  text-decoration-thickness: 0%;
+  -webkit-text-decoration-skip: ink;
+          text-decoration-skip-ink: auto;
+  color: #EB0029 !important;
+}
+form .btn {
+  width: 100%;
+}
+
+.popup-feedback {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: none;
+  justify-content: center;
+  align-items: center;
+}
+.popup-feedback .feedback__form {
+  width: 608px;
+  position: relative;
+  z-index: 2;
+}
+.popup-feedback .feedback__form .popup-feedback-close {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  cursor: pointer;
+}
+
+@media (max-width: 1200px) {
+  .feedback {
+    padding-bottom: 50px;
+  }
+  .feedback__img {
+    display: none;
+  }
+  .feedback__form {
+    margin-top: 0;
+    margin-bottom: 0;
+    width: 100%;
+  }
+}
+@media (max-width: 576px) {
+  .feedback__form h2 {
+    text-align: center;
+  }
+  form .form__row {
+    grid-template-columns: 1fr;
+  }
+}/*# sourceMappingURL=feedback.css.map */

@@ -1,0 +1,43 @@
+.marking-about{
+    padding: 24px 0;
+
+    &__container{
+        display: flex;
+        gap: 24px;
+    }
+    &__img{
+        width: 65%;
+        aspect-ratio: 1.8/1;
+    }
+    &__content{
+        width: 33%;
+        
+    }
+}
+@media (max-width: 1200px) {
+    .marking-about{
+        &__container{
+            flex-direction: column-reverse;
+        }
+        &__img{
+            width: 100%;
+        }
+        &__content{
+            width: 100%;
+        }
+    }
+    
+}
+
+@media (max-width: 576px) {
+    .marking-about{
+        &__img{
+            width: calc(100% + 32px);
+            margin-left: -16px;
+        }
+    }
+    .marking-about-contribution .marking-about__img{
+        order: -1;
+    }
+    
+}

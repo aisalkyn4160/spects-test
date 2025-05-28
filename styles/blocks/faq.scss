@@ -1,0 +1,44 @@
+.faq{
+    max-width: 924px;
+    &__item{
+        border-bottom: 1px solid #E5E5E5;
+        padding: 20px 0;
+    }
+    &__item:last-child{
+        border-bottom: none;
+    }
+    &__item-title{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        cursor: pointer;
+
+        svg{
+            transition: all .3s ease;
+        }
+
+        &.active{
+            svg{
+                transform: rotate(180deg);
+            }
+        }
+    }
+    &__item-text{
+        max-height: 0;
+        overflow: hidden;
+        transition: all .3s ease;
+    }
+
+}
+
+@media (max-width: 576px) {
+    .faq{
+        h3{
+            text-align: left;
+        }
+        p{
+            text-align: left;
+        }
+    }
+    
+}
