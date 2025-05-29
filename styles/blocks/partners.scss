@@ -10,9 +10,11 @@
         align-items: center;
         filter: grayscale(100%);
         transition: .3s ease;
+        padding: 20px;
         
         img{
             max-width: 100%;
+            width: unset;
         }
 
         &:hover{
