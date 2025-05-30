@@ -1,3 +1,16 @@
+// переключение по кнопкам сортировки
+
+const tags = document.querySelectorAll('.tag');
+
+tags.forEach(tag => {
+  tag.addEventListener('click', (e) => {
+    e.preventDefault();
+    tags.forEach(t => t.classList.remove('active'));
+    tag.classList.add('active');
+  });
+});
+
+
 // получаем все элементы селекта
 const select = document.querySelector('.select');
 const selectButton = select.querySelector('.select__button');
@@ -68,3 +81,5 @@ document.addEventListener('click', function(event) {
     }
   });
 });
+
+

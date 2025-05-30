@@ -11,9 +11,11 @@
   align-items: center;
   filter: grayscale(100%);
   transition: 0.3s ease;
+  padding: 20px;
 }
 .partners__item img {
   max-width: 100%;
+  width: unset;
 }
 .partners__item:hover {
   filter: grayscale(0);

@@ -169,15 +169,18 @@
     }
 }
 .file-btn{
+    display: flex; align-items: center;
+    gap: 24px;
     position: relative;
     height: 48px;
     margin-bottom: 36px;
-    overflow: hidden;
+    color: #A6A6A6;
+    // overflow: hidden;
 
     label{
-        position: absolute;
-        top: 0;
-        left: 0;
+        // position: absolute;
+        // top: 0;
+        // left: 0;
         width: 265px;
         height: 48px;
         display: flex;

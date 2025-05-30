@@ -45,8 +45,7 @@
         }
     }
 }
-.has-submenu{
-   
+.has-submenu{  
     & > a{
         position: relative;
          padding-right: 16px;
@@ -108,19 +107,90 @@
     .has-submenu{
         background: unset;
         .submenu{
-        display: flex;
-           position: static;
-           box-shadow: none;
-           border-radius: 0;
-           padding: 5px;
+            display: flex;
+            position: static;
+            box-shadow: none;
+            border-radius: 0;
+            padding: 5px;
+            
            
-           li a{
-            background: unset;
-            color: #1E1E1E;
-           }
+            li a{
+                background: unset;
+                color: #6A6A6A !important;
+            }
         }
     }
 }
+.has-dropmenu{
+    position: relative;
+    > a{
+        position: relative;
+        padding-right: 16px;
+
+        &::after{
+        content: '';
+        position: absolute;
+        top: 40%;
+        right: 0px;
+        transform: translateY(-50%);
+        width: 5px;
+        height: 5px;
+        border-top: 1px solid #000;
+        border-right: 1px solid #000;
+        transform: rotate(135deg);
+    }
+    }
+    
+    .dropmenu{
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: max-content;
+        background-color: #fff;
+        padding: 24px;
+        gap: 10px;
+        z-index: 10;
+        display: none;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 12px;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 140%;
+        letter-spacing: -2%;
+        text-transform: uppercase;
+        color: #6A6A6A;
+        li{
+            padding: 0;
+        }
+    }
+    &:hover > .dropmenu{
+        display: flex;
+    }
+}
+
+.language-switcher {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  min-width: 46px;
+  right: 0;
+  z-index: 1;
+}
+
+.dropdown-content a {
+  display: block;
+  text-align: right;
+  text-decoration: none;
+}
+
+.dropdown-content a:hover {
+}
+
 .language-btn{
     background-color: transparent;
     border: none;
@@ -128,6 +198,9 @@
     display: flex;
     align-items: center;
     gap: 8px;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 140%;
 }
 
 .mobile-menu{
@@ -318,6 +391,10 @@
     .mobile-menu.active{
         left: 0;
     } 
+    .has-submenu .has-submenu .submenu li a{
+        color: #1E1E1E !important;
+        font-size: 12px;
+    }
 }
 @media (max-width: 767px) {
     .header{

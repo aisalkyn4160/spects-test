@@ -2,6 +2,8 @@
   padding: 0;
   position: relative;
   min-height: 608px;
+  margin-top: 32px;
+  margin-bottom: 50px;
 }
 .contacts-map .map {
   filter: grayscale(100%);
@@ -12,11 +14,13 @@
   height: 100%;
   z-index: 0;
 }
+.contacts-map .map div {
+  height: 100%;
+}
 .contacts-map .main-contacts {
   max-width: 572px;
   min-height: 636px;
   padding: 48px 40px;
-  border: 1px solid blue;
   background-color: #FFF;
   margin-top: -22px;
   margin-left: 35px;

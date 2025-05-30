@@ -1,3 +1,40 @@
+document.addEventListener('DOMContentLoaded', function() {
+  const button = document.getElementById('language-btn');
+  const buttonText = button.querySelector('span');
+  const dropdown = document.getElementById('language-dropdown');
+  const option = document.querySelector('.language-option');
+
+  // Показать/скрыть дропдаун при клике на кнопку
+  button.addEventListener('click', function() {
+    dropdown.style.display = dropdown.style.display === 'block' ? 'none' : 'block';
+  });
+
+  // Обработка выбора языка
+  option.addEventListener('click', function(e) {
+    e.preventDefault();
+    dropdown.style.display = 'none';
+    if (buttonText.textContent === 'RU') {
+      buttonText.textContent = 'EN';
+      option.textContent = 'RU';
+    } else {
+      buttonText.textContent = 'RU';
+      option.textContent = 'EN';
+    }
+    
+  });
+
+  // Закрыть дропдаун при клике вне его
+  window.addEventListener('click', function(e) {
+    if (!e.target.matches('#language-button')) {
+      if (dropdown.classList.contains('show')) {
+        dropdown.classList.remove('show');
+      }
+    }
+  });
+});
+
+
+
 const mobileMenu = document.querySelector(".mobile-menu");
 const burger = document.querySelector(".header__burger");
 const closeMenu = document.querySelector(".close-menu");
@@ -484,3 +521,19 @@ if(careerValues.offsetHeight > 850) {
 }
 
 
+const fileInp = document.querySelector('#file-inp');
+const fileBtn = document.querySelector('.file-label');
+const fileName = document.querySelector('.file-name');
+
+fileBtn.addEventListener('click', () => {
+  fileInp.click();
+});
+
+fileInp.addEventListener('change', () => {
+  if (fileInp.files.length > 0) {
+    const file = fileInp.files[0];
+    fileName.textContent = file.name;
+  } else {
+    fileName.textContent = 'Файл не выбран';
+  }
+});
