@@ -169,8 +169,10 @@
     }
 }
 .file-btn{
-    display: flex; align-items: center;
-    gap: 24px;
+    display: flex; 
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
     position: relative;
     height: 48px;
     margin-bottom: 36px;
@@ -200,7 +202,9 @@
         left: 110px;
         border: none;
     }
-    
+    span{
+        padding-left: 14px;
+    }
 }
 
 

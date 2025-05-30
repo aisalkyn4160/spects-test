@@ -161,7 +161,8 @@
 .file-btn {
   display: flex;
   align-items: center;
-  gap: 24px;
+  flex-wrap: wrap;
+  gap: 10px;
   position: relative;
   height: 48px;
   margin-bottom: 36px;
@@ -186,6 +187,9 @@
   position: absolute;
   left: 110px;
   border: none;
+}
+.file-btn span {
+  padding-left: 14px;
 }
 
 @media (max-width: 767px) {
